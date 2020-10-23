@@ -1,0 +1,5 @@
+
+# SQL Server sqlcmd
+
+docker run -it --rm mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04 /opt/mssql-tools/bin/sqlcmd -S $IP -U sa
+

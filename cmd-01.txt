@@ -1,0 +1,4 @@
+
+# PowerCLI Pod
+kubectl run pcli-01 --image=vmware/powerclicore --generator=run-pod/v1 -it --rm
+
