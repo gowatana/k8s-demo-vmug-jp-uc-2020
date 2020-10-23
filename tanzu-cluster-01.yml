@@ -1,0 +1,25 @@
+---
+kind: TanzuKubernetesCluster
+apiVersion: run.tanzu.vmware.com/v1alpha1
+metadata:
+  name: tanzu-cluster-01
+spec:
+  distribution:
+    version: v1.16
+  topology:
+    controlPlane:
+      count: 1
+      class: best-effort-small
+      storageClass: spbm-wcp
+    workers:
+      count: 1
+      class: best-effort-small
+      storageClass: spbm-wcp
+  settings:
+    network:
+      cni:
+        name: calico
+#      services:
+#        cidrBlocks: ["10.16.0.0/12"]
+#      pods:
+#        cidrBlocks: ["10.32.0.0/12"]
